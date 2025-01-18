@@ -10,4 +10,4 @@
 
 ## How to contact
 
-_TBD_
+Use the `@steering_council` mention on the Forum.
