@@ -45,7 +45,7 @@ attendees:
         - Public Markdown on github
         - Spend a few minutes at the end to review the notes for what shouldn't be published.
         - Have markdown reviewed before posting, wait on some thumbs ups
-        - Bring in Jacob/Katherine/DSF for assistance on note taking
+        - Bring in Jacob/Catherine/DSF for assistance on note taking
     - GSoC
         - Likely needs a dedicated person/team/WG
         - Other orgs have a dedicated community position
