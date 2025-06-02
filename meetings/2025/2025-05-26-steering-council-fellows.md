@@ -21,7 +21,7 @@ attendees:
     - Request for Vote: Admin Keyboard Shortcuts and Command Palette - Django Internals
 - Feature review process
 - Lilian Tran’s improvements to the contributor workflow
-- Sprint Ideas for Django on the Med? ��️
+- Sprint Ideas for Django on the Med? 🏝️
 
 
 ## Action items
@@ -103,7 +103,7 @@ attendees:
     - Any integrations with Trac, but we’re not sure. Baptiste is the person who will know
 
 
-### Django on the Med
+### Django on the Med 🏝️
 
 - Twice a year
 - Can we add a focus for those sprints?
