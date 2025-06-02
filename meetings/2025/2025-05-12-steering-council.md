@@ -2,7 +2,7 @@
 date: 2025-05-12
 members:
   - Carlton Gibson
-  - Emma Delescole
+  - Emma Delescolle
   - Frank Wiles
   - Lily Foote
   - Tim Schilling

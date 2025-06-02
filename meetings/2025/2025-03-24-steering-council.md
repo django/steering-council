@@ -1,7 +1,7 @@
 ---
 date: 2025-03-24
 members:
-  - Emmanuelle Delescole
+  - Emmanuelle Delescolle
   - Frank Wiles
   - Lily Foote
   - Tim Schilling

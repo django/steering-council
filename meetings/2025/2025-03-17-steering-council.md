@@ -2,7 +2,7 @@
 date: 2025-03-17
 members:
   - Carlton Gibson
-  - Emmanuelle Delescole
+  - Emmanuelle Delescolle
   - Lily Foote
   - Tim Schilling
 attendees:

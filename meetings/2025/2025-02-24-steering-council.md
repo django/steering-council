@@ -1,7 +1,7 @@
 ---
 date: 2025-02-24
 members:
-  - Emmanuelle Delescole
+  - Emmanuelle Delescolle
   - Lily Foote
   - Tim Schilling
 attendees:
