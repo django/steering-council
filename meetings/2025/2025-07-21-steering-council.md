@@ -2,7 +2,7 @@
 date: 2025-07-21
 members:
   - Emma Delescolle
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 attendees:
   - Catherine Holmes

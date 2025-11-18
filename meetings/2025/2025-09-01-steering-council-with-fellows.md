@@ -3,7 +3,7 @@ date: 2025-09-01
 members:
   - Carlton Gibson
   - Emma Delescolle
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 attendees:
   - Catherine Holmes

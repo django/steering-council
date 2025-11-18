@@ -3,7 +3,7 @@ date: 2025-10-06
 members:
   - Carlton Gibson
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 attendees:
   - Catherine Holmes
