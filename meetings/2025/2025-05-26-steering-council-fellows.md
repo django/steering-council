@@ -6,7 +6,7 @@ members:
   - Frank Wiles
   - Lily Foote
   - Tim Schilling
-attendees:
+other_attendees:
   - Catherine Holmes
   - Natalia Bidart
 ---

@@ -5,7 +5,7 @@ members:
   - Carlton 
   - Lily
   - Frank
-attendees:
+other_attendees:
   - Catherine 
 ---
 

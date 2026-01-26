@@ -5,7 +5,7 @@ members:
   - Emma Delescolle
   - Frank Wiles
   - Lily Acorn
-attendees:
+other_attendees:
   - Catherine Holmes
   - Jacob Walls
   - Natalia Bidart

@@ -6,7 +6,7 @@ members:
   - Frank Wiles
   - Lily Acorn
   - Tim Schilling
-attendees:
+other_attendees:
   - Catherine Holmes
   - Jacob Walls
   - Natalia Bidart
