@@ -4,7 +4,7 @@ members:
   - Emma Delescolle
   - Lily Foote
   - Tim Schilling
-attendees:
+other_attendees:
   - Catherine Holmes
   - Jacob Kaplan-Moss
 ---

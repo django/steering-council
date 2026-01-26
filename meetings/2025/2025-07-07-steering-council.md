@@ -5,7 +5,7 @@ members:
   - Emma Delescolle
   - Frank Wiles
   - Tim Schilling
-attendees:
+other_attendees:
   - Catherine Holmes
 ---
 

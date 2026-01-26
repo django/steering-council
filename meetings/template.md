@@ -2,7 +2,7 @@
 date: YYYY-MM-DD
 members:
   - [Steering council members]
-attendees:
+other_attendees:
   - [Other attendees]
 ---
 
