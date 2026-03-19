@@ -11,7 +11,7 @@ other_attendees:
 ## Agenda
 
 - DEPs
-- DSF & Oracle?
+- DSF & Oracle
 - Adding django-manifeststaticfiles-enhanced to ecosystem page
 - New features review
 
