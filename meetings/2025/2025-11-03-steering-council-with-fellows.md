@@ -4,7 +4,7 @@ members:
   - Carlton Gibson
   - Emma Delescolle
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
 other_attendees:
   - Catherine Holmes
   - Jacob Walls

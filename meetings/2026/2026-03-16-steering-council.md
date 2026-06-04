@@ -2,7 +2,7 @@
 date: 2026-03-16
 members:
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 other_attendees:
   - Tom Carrick

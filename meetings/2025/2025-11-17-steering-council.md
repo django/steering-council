@@ -3,7 +3,7 @@ date: 2025-11-17
 members:
   - Emma Delescolle
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 other_attendees:
   - Catherine Holmes

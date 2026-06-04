@@ -3,7 +3,7 @@ date: 2026-03-02
 members:
   - Emma Delescolle
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 other_attendees:
   - Catherine Holmes

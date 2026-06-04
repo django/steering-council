@@ -3,7 +3,7 @@ date: 2026-04-06
 members:
   - Carlton Gibson
   - Frank Wiles
-  - Lily Acorn
+  - Lily Foote
   - Tim Schilling
 other_attendees:
   - Jacob Walls
