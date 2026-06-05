@@ -14,7 +14,6 @@ other_attendees:
 ## Agenda
 
 - Action items review
--
 - DEP 18 approval
 - Fellows:
     - AI slop way down after GSoC application season
