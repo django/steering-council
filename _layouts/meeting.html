@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% capture meeting_title %}{% include meeting-title.html p=page %}{% endcapture %}
+  {% include head.html title=meeting_title %}
+</head>
+<body>
+  {% include header.html %}
+  <main class="site-main">
+    <div class="page-content">
+      <div class="gradient-bar"></div>
+      <h1>{% include meeting-title.html p=page %}</h1>
+      <div class="attendees">
+        <h2>Members</h2>
+        <ul>
+          {% for name in page.members %}<li>{{ name }}</li>
+          {% endfor %}
+        </ul>
+        {% if page.other_attendees and page.other_attendees.size > 0 %}
+        <h2>Other attendees</h2>
+        <ul>
+          {% for name in page.other_attendees %}<li>{{ name }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

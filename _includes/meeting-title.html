@@ -1,0 +1,1 @@
+{%- if include.short -%}{{ include.p.date | date: "%Y-%m-%d" }}{%- else -%}Steering Council meeting, {{ include.p.date | date: "%-d %b %Y" }}{%- endif -%}{%- if include.p.name contains "fellows" %} (with Fellows){% endif -%}

@@ -1,0 +1,18 @@
+title: Django Steering Council Meeting Minutes
+description: Meeting minutes of the Django Steering Council
+url: https://django.github.io
+baseurl: /steering-council
+permalink: pretty
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - LICENSE
+  - justfile
+  - meetings/template.md
+
+defaults:
+  - scope:
+      path: "meetings"
+    values:
+      layout: meeting

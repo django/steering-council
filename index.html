@@ -1,0 +1,28 @@
+---
+layout: default
+title: Steering Council Meeting Minutes
+---
+
+<div class="page-header">
+  <h1>Steering Council Meeting Minutes</h1>
+  <p>Public meeting minutes from the Django Steering Council.</p>
+</div>
+
+{% assign meetings = site.pages | where_exp: "p", "p.path contains 'meetings/20'" | sort: "date" | reverse %}
+{% assign years = meetings | group_by_exp: "p", "p.date | date: '%Y'" %}
+
+{% for year in years %}
+<div class="year-group">
+  <div class="year-label">{{ year.name }}</div>
+  <ul class="minutes-list">
+    {% for m in year.items %}
+    <li>
+      <a href="{{ site.baseurl }}{{ m.url }}">
+        <span class="minutes-date">{% include meeting-title.html p=m short=true %}</span>
+        <span class="minutes-arrow">&rarr;</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
