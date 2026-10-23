@@ -1,0 +1,365 @@
+:root {
+  --django-dark: #092E20;
+  --django-green: #0C4B33;
+  --django-light-green: #44B78B;
+  --django-accent: #44B78B;
+  --bg: #fafaf9;
+  --bg-card: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--django-green);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--django-light-green);
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.875rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--django-dark);
+  text-decoration: none;
+}
+
+.site-brand:hover {
+  color: var(--django-green);
+}
+
+.site-brand svg {
+  width: 30px;
+  height: 30px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--django-dark);
+  border-bottom-color: var(--django-light-green);
+}
+
+.rss-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted) !important;
+  font-size: 0.85rem;
+}
+
+.rss-link:hover {
+  color: #f97316 !important;
+}
+
+/* Main content */
+.site-main {
+  flex: 1;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+/* Index page */
+.page-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--django-dark);
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--django-dark);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.minutes-list {
+  list-style: none;
+}
+
+.minutes-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.minutes-list li:last-child {
+  border-bottom: none;
+}
+
+.minutes-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  color: var(--text);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.minutes-list a:hover {
+  background: var(--bg-card);
+  color: var(--django-green);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transform: translateX(4px);
+}
+
+.minutes-date {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.minutes-arrow {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: transform 0.2s;
+}
+
+.minutes-list a:hover .minutes-arrow {
+  transform: translateX(4px);
+  color: var(--django-light-green);
+}
+
+/* Year groups */
+.year-group {
+  margin-bottom: 2rem;
+}
+
+.year-label {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--django-dark);
+  padding: 0.5rem 0;
+  margin-bottom: 0.25rem;
+  position: sticky;
+  top: 3.5rem;
+  background: var(--bg);
+  z-index: 10;
+}
+
+/* Page layout (individual minutes) */
+.page-content {
+  max-width: 48rem;
+}
+
+.page-content h1 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--django-dark);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.page-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--django-dark);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--django-light-green);
+}
+
+.page-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--django-green);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+}
+
+.page-content ul, .page-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.page-content li {
+  margin-bottom: 0.35rem;
+}
+
+.page-content a {
+  color: var(--django-green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-content a:hover {
+  color: var(--django-light-green);
+}
+
+.gradient-bar {
+  height: 3px;
+  background: linear-gradient(to right, var(--django-dark), var(--django-light-green));
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--django-dark);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--django-light-green);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .site-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .minutes-list a {
+    padding: 0.75rem;
+  }
+}
+
+/* Meeting attendees */
+.attendees {
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.page-content .attendees h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border: 0;
+  margin: 0.5rem 0 0.25rem;
+  padding: 0;
+}
+
+.page-content .attendees ul {
+  margin: 0;
+}
