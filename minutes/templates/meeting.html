@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ meeting.title }}{% endblock %}
+
+{% block content %}
+<div class="page-content">
+  <div class="gradient-bar"></div>
+  <h1>{{ meeting.title }}</h1>
+  <div class="attendees">
+    <h2>Members</h2>
+    <ul>
+      {% for name in meeting.members %}<li>{{ name }}</li>
+      {% endfor %}
+    </ul>
+    {% if meeting.other_attendees %}
+    <h2>Other attendees</h2>
+    <ul>
+      {% for name in meeting.other_attendees %}<li>{{ name }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {{ meeting.html|safe }}
+</div>
+{% endblock %}

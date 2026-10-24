@@ -1,0 +1,6 @@
+_site/
+staticfiles/
+.venv/
+__pycache__/
+CLAUDE.md
+meetings/template.md

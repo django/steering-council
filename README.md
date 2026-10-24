@@ -1,5 +1,9 @@
 # Django Steering Council
 
+## Minutes
+
+Meeting minutes are published at https://django.github.io/steering-council/.
+
 ## Members
 
 - Carlton Gibson
