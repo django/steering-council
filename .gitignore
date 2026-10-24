@@ -1,6 +1,6 @@
 _site/
-.jekyll-cache/
-.sass-cache/
+staticfiles/
+.venv/
+__pycache__/
 CLAUDE.md
-Gemfile
-Gemfile.lock
+meetings/template.md

@@ -22,14 +22,14 @@ other_attendees:
     - Paste - plan publish - communicate with other authors on slack - Emma
     - Share on #marketing channel in Slack 
 - Sovereign Tech Fund
-      - Emma: Get one or more project(s) ready (maybe Admin or at least list of places to start)
-      - Plan another meeting with Lexi once the above is done
+    - Emma: Get one or more project(s) ready (maybe Admin or at least list of places to start)
+    - Plan another meeting with Lexi once the above is done
 - Tim: Iterate on Technical Governance document
-      - Pending resolution on decision making
-      - Pending Jacob Kaplan-Moss feedback
+    - Pending resolution on decision making
+    - Pending Jacob Kaplan-Moss feedback
 - Tim: Teams Charters
-      - Security Team \- Looking for chair / co-chair
-      - Translations \- Need to reach out to Claude
+    - Security Team \- Looking for chair / co-chair
+    - Translations \- Need to reach out to Claude
       - T\&R Pending review from team [https://github.com/tim-schilling/dsf-working-groups/pull/6](https://github.com/tim-schilling/dsf-working-groups/pull/6) 
       - Ops \- [Public PR](https://github.com/django/dsf-working-groups/pull/73) pending review from community and Board
       - Releasers \- [Public PR](https://github.com/django/dsf-working-groups/pull/72) pending resolution of mergers team

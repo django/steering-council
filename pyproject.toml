@@ -1,0 +1,24 @@
+[project]
+name = "steering-council-minutes"
+version = "0"
+description = "Static site for the Django Steering Council meeting minutes"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.1",
+    "django-distill>=4.0.6",
+    "markdown-it-py>=4.2.0",
+    "mdit-py-plugins>=0.6.1",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

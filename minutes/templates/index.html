@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Steering Council Meeting Minutes{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Steering Council Meeting Minutes</h1>
+  <p>Public meeting minutes from the Django Steering Council.</p>
+</div>
+
+{% regroup meetings by date.year as years %}
+{% for year in years %}
+<div class="year-group">
+  <div class="year-label">{{ year.grouper }}</div>
+  <ul class="minutes-list">
+    {% for m in year.list %}
+    <li>
+      <a href="{{ m.get_absolute_url }}">
+        <span class="minutes-date">{{ m.short_title }}</span>
+        <span class="minutes-arrow">&rarr;</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+{% endblock %}
