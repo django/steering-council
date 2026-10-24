@@ -12,3 +12,7 @@ build:
 # Run the tests
 test:
     uv run pytest
+
+# Check GitHub workflows and Dependabot config for security issues
+zizmor:
+    uvx zizmor .

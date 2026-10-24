@@ -1,0 +1,6 @@
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        # Actions are pinned to exact version tags, kept current by Dependabot.
+        "*": ref-pin
