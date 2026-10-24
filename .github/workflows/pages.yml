@@ -28,6 +28,13 @@ jobs:
           enable-cache: false # no cache in a publishing workflow (cache poisoning)
       - run: uv run pytest
       - run: uv run python manage.py distill generate --output-directory _site --collectstatic --force
+      - name: Accessibility scan of the built site
+        uses: Community-Access/accessibility-agents/action@v6.0.0
+        with:
+          scan-type: web
+          paths: _site/steering-council
+          fail-on: serious
+          upload-sarif: false # report as annotations; no security-events permission
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: _site/steering-council
