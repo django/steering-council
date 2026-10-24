@@ -20,11 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run pytest
+      - run: uv run python manage.py distill generate --output-directory _site --collectstatic --force
       - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/steering-council
 
   deploy:
     needs: build

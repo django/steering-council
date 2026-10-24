@@ -1,10 +1,14 @@
 @default:
     just --list
 
-# Start Jekyll development server
+# Start the dev server at http://127.0.0.1:8000/steering-council/
 up:
-    jekyll serve --watch
+    DJANGO_DEBUG=1 uv run python manage.py runserver
 
-# Build the Jekyll site
+# Build the static site into _site/ (GitHub Pages serves _site/steering-council/)
 build:
-    jekyll build
+    uv run python manage.py distill generate --output-directory _site --collectstatic --force
+
+# Run the tests
+test:
+    uv run pytest

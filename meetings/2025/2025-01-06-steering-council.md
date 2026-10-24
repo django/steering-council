@@ -46,7 +46,7 @@ other_attendees:
    - [Terminology, doesn't require vote](https://github.com/django/deps/pull/95)
    - [Support md files for DEPs, doesn't require vote](https://github.com/django/deps/pull/94)
 10. Next meeting
-   - 2025-01-13
+    - 2025-01-13
 
 ## Action items
 
