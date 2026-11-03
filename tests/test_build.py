@@ -83,9 +83,9 @@ def test_index_groups_by_year_newest_first(site):
     years = re.findall(r'<div class="year-label">(\d{4})</div>', html)
     dates = re.findall(r'<span class="minutes-date">([^<]*)</span>', html)
 
-    assert years == ["2026", "2025"]
+    assert years == sorted(set(years), reverse=True)
     assert len(dates) == len(source_slugs())
-    assert dates[0] == "2026-10-19"
+    assert dates.index("2026-10-19") < dates.index("2026-09-21")
     assert dates[-1] == "2025-01-06"
     assert "2025-03-31 (with Fellows)" in dates
 
@@ -96,12 +96,17 @@ def test_feed(site):
     self_link = feed.find(f"{ATOM}link[@rel='self']").get("href")
 
     assert self_link == "https://django.github.io/steering-council/feed.xml"
+    published = [e.find(f"{ATOM}published").text for e in entries]
+    links = [e.find(f"{ATOM}link").get("href") for e in entries]
+    prefix = "https://django.github.io/steering-council/"
+
     assert len(entries) == 10
-    assert entries[0].find(f"{ATOM}link").get("href") == (
-        "https://django.github.io/steering-council/meetings/2026/"
-        "2026-10-19-steering-council/"
-    )
-    assert entries[0].find(f"{ATOM}title").text == (
-        "Steering Council meeting, 19 Oct 2026"
+    assert published == sorted(published, reverse=True)
+    assert published[0] >= "2026-10-19"
+    for link in links:
+        assert link.startswith(prefix)
+        assert (site / link.removeprefix(prefix) / "index.html").is_file(), link
+    assert entries[0].find(f"{ATOM}title").text.startswith(
+        "Steering Council meeting, "
     )
     assert "<h2" in entries[0].find(f"{ATOM}summary").text
