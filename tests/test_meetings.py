@@ -1,7 +1,13 @@
 from datetime import date
+from pathlib import Path
 from textwrap import dedent
 
-from minutes.meetings import load_meetings
+import pytest
+
+from minutes.meetings import load_meetings, parse_meeting
+
+MEETINGS_DIR = Path(__file__).resolve().parent.parent / "meetings"
+MEETING_FILES = sorted(MEETINGS_DIR.glob("20*/*.md"))
 
 
 def write(root, rel_path, text):
@@ -108,6 +114,22 @@ def test_titles(tmp_path):
             "2025-09-01 (with Fellows)",
         ),
     }
+
+
+@pytest.mark.parametrize(
+    "path", MEETING_FILES, ids=[p.stem for p in MEETING_FILES]
+)
+def test_meeting_file_is_valid(path):
+    """Every real meeting file parses, has the required fields and renders."""
+    meeting = parse_meeting(path, MEETINGS_DIR)
+
+    assert isinstance(meeting.date, date)
+    assert path.name.startswith(f"{meeting.date:%Y-%m-%d}-")
+    assert path.parent.name == str(meeting.date.year)
+    assert meeting.members
+    assert all(isinstance(m, str) for m in meeting.members)
+    assert all(isinstance(a, str) for a in meeting.other_attendees)
+    assert meeting.html.strip()
 
 
 def html_for(tmp_path, body):
